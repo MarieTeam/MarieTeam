@@ -39,6 +39,8 @@ body{
 }
 form{
     width: 360px;
+	margin-top: 42%;
+	margin-left: 19%;
 }
 .login-content img{
     height: 100px;
@@ -95,7 +97,7 @@ form{
 	bottom: -2px;
 	width: 0%;
 	height: 2px;
-	background-color: #38d39f;
+	background-color: #4468A3;
 	transition: .4s;
 }
 
@@ -117,7 +119,7 @@ form{
 }
 
 .input-div.focus > .i > i{
-	color: #38d39f;
+	color: #4468A3;
 }
 
 .input-div > div > input{
@@ -149,7 +151,7 @@ a{
 }
 
 a:hover{
-	color: #38d39f;
+	color: #4468A3;
 }
 
 .btn{
@@ -159,7 +161,7 @@ a:hover{
 	border-radius: 25px;
 	outline: none;
 	border: none;
-	background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+	background-image: linear-gradient(to right, #4468A3, #4468A3, #4468A3);
 	background-size: 200%;
 	font-size: 1.2rem;
 	color: #fff;
@@ -176,7 +178,10 @@ a:hover{
 
 @media screen and (max-width: 1050px){
 	.container{
-		grid-gap: 5rem;
+		grid-gap: 3rem;
+	}
+	.img img{
+		width: 400px;
 	}
 }
 
@@ -196,6 +201,9 @@ a:hover{
 }
 
 @media screen and (max-width: 900px){
+	form{
+		margin: 26%;
+	}
 	.container{
 		grid-template-columns: 1fr;
 	}
@@ -213,3 +221,8 @@ a:hover{
 	}
 }
 
+@media screen and (max-width: 425px){
+	form{
+		margin: 6%;
+	}
+}

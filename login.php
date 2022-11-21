@@ -14,8 +14,6 @@
             </div>
             <div class="login-container">
                 <form action="login.php">
-                    <img src="src/img/pp.svg">
-                    <h2>Bienvenu</h2>
                     <div class="input-div">
                         <div class="i">
                             <i class="fas fa-user"></i>
