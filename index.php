@@ -2,7 +2,7 @@
     <head>
         <title>MARIE TEAM</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="src/css/login.css">
+        <link rel="stylesheet" href="src/css/index.css">
     </head>
     <body>
         <?php
