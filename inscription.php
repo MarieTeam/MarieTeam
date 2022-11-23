@@ -31,13 +31,18 @@
                             <h5>Mot de passe</h5>
                             <input type="password" class="input">
                         </div>
+                    </div>
+                    <div class="input-div">
+                        <div class="i">
+                            <i class="fas fa-lock"></i>
+                        </div>
                         <div>
-                            <h5>Confirmation Mot de passe</h5>
+                            <h5>Confirmation de mot de passe</h5>
                             <input type="password" class="input">
                         </div>
                     </div>
                     <a href="#">Mot de passe oublié ?</a>
-                    <input type="submit" class="btn" value="Connexion">
+                    <input type="submit" class="btn" value="Inscription">
                 </form>
             </div>
         </div>
