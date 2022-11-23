@@ -31,7 +31,7 @@
                     <button type="button" class="btn btn-outline-primary me-2" onclick="window.location.href = 'login.php';">
                         Connexion
                     </button>
-                    <button type="button" class="btn btn-primary">
+                    <button type="button" class="btn btn-outline-primary me-2" onclick="window.location.href = 'inscription.php';">
                         Inscription
                     </button>
                 </div>
