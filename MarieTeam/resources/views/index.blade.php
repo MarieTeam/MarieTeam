@@ -2,7 +2,7 @@
 
 <head>
     <title>MARIE TEAM</title>
-    <link rel="shortcut icon" href="src/img/logo.png" />
+    <link rel="shortcut icon" href="{{ Vite::asset('resources/img/logo.png') }}" />
     <meta charset="UTF-8">
     @vite('resources/css/app.css')
 </head>
@@ -12,7 +12,7 @@
     <div class="trajet">
         <div class="destination">
             <div class="logo_bateau">
-                <img style="width: 20px; height: 20px;" src="..../img/logo_bateau.svg">
+                <img style="width: 20px; height: 20px;" src="{{ Vite::asset('resources/img/logo_bateau.svg') }}">
             </div>
             <div>
                 <p>route</p>
