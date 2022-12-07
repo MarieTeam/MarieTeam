@@ -15,14 +15,11 @@
                 <img style="width: 20px; height: 20px;" src="{{ Vite::asset('resources/img/logo_bateau.svg') }}">
             </div>
             <div>
-                <p>route</p>
-                <!-- <select>
-                    <option selected="selected">selectionner un trajet</option>
-
-                </select> -->
-                <select>
-                    <option selected="selected">selectionner un trajet</option>
-                    <option value="test"></option>
+                <select class="form-select" aria-label="Disabled select example" disabled>
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
                 </select>
             </div>
         </div>
