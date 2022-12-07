@@ -15,7 +15,7 @@
                 <img style="width: 20px; height: 20px;" src="{{ Vite::asset('resources/img/logo_bateau.svg') }}">
             </div>
             <div>
-                <select class="form-select" aria-label="Disabled select example" disabled>
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                     <option selected>Open this select menu</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
