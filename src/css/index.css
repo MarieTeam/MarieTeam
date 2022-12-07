@@ -39,7 +39,7 @@
 /*Plan Traverse*/
 .planTraverse
 {
-    background-image: url("https://clovisdebrandt.fr/Ap/src/img/bateau.png");
+    background-image: url("../img/bateau.png");
     height: 70%;
     background-repeat: no-repeat;
     text-align: center;
@@ -61,7 +61,7 @@
 
 /*Meteo*/
 .meteo {
-    background-image: url("https://clovisdebrandt.fr/Ap/src/img/marseille.png");
+    background-image: url("../img/marseille.png");
     height: 100%;
     background-repeat: no-repeat;
 }
