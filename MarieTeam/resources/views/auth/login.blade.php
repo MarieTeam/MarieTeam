@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
 </head>
 <body>
-<img class="wave" src="{{ asset('img/wave.png') }}">
+<img class="wave" src="{{ Vite::asset('resources/img/wave.png') }}">
 <div class="container">
     <div class="img">
         <img src="MarieTeam/resources/img/boat.svg">
