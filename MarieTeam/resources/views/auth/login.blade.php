@@ -37,6 +37,5 @@
         </form>
     </div>
 </div>
-<script type="text/javascript" src="src/js/login.js"></script>
-</body>
+@vite('resources/js/login.js')</body>
 </html>
