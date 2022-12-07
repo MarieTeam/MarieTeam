@@ -4,10 +4,10 @@
         <link rel="stylesheet" href=".../../src/css/nav.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Navbar</title>       
+        <title>Navbar</title>
     </head>
     <body>
-        
+
         <div class="container">
             <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
                 <a href="" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
@@ -28,12 +28,8 @@
                     </li>
                 </ul>
                 <div class="col-md-3 text-end">
-                    <button type="button" class="btn btn-outline-primary me-2" onclick="window.location.href = 'login.php';">
-                        Connexion
-                    </button>
-                    <button type="button" class="btn btn-outline-primary me-2" onclick="window.location.href = 'inscription.php';">
-                        Inscription
-                    </button>
+                    <a href="/login" class="btn btn-outline-primary me-2">Connexion</a>
+                    <a href="/register" class="btn btn-outline-primary me-2">Inscription</a>
                 </div>
             </header>
         </div>

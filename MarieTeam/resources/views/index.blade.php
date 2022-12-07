@@ -8,11 +8,11 @@
 </head>
 
 <body>
-
+@include('components/nav')
     <div class="trajet">
         <div class="destination">
             <div class="logo_bateau">
-                <img style="width: 20px; height: 20px;" src="src/img/logo_bateau.svg">
+                <img style="width: 20px; height: 20px;" src="..../img/logo_bateau.svg">
             </div>
             <div>
                 <p>route</p>

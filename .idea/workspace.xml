@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9c8c9a7-5dec-47e8-bdd3-a910096dc169" name="Changes" comment="" />
+    <list default="true" id="f9c8c9a7-5dec-47e8-bdd3-a910096dc169" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarieTeam/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/MarieTeam/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarieTeam/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/MarieTeam/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarieTeam/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/MarieTeam/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarieTeam/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/MarieTeam/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inscription.html" beforeDir="false" afterPath="$PROJECT_DIR$/inscription.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/MarieTeam/resources/views/components/nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/inscription.css" beforeDir="false" afterPath="$PROJECT_DIR$/MarieTeam/resources/css/inscription.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/MarieTeam/resources/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/MarieTeam/resources/css/nav.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/bateau.png" beforeDir="false" afterPath="$PROJECT_DIR$/MarieTeam/resources/img/bateau.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/boat.svg" beforeDir="false" afterPath="$PROJECT_DIR$/MarieTeam/resources/img/boat.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/MarieTeam/resources/img/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/logo_bateau.svg" beforeDir="false" afterPath="$PROJECT_DIR$/MarieTeam/resources/img/logo_bateau.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/marseille.png" beforeDir="false" afterPath="$PROJECT_DIR$/MarieTeam/resources/img/marseille.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/pp.svg" beforeDir="false" afterPath="$PROJECT_DIR$/MarieTeam/resources/img/pp.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/wave.png" beforeDir="false" afterPath="$PROJECT_DIR$/MarieTeam/resources/img/wave.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/inscription.js" beforeDir="false" afterPath="$PROJECT_DIR$/MarieTeam/resources/js/inscription.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/MarieTeam/resources/js/login.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,12 +57,17 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\batbo\Documents\MarieTeam\MarieTeam\resources\views" />
+      <recent name="C:\Users\clovi\Documents\GitHub\MarieTeam\MarieTeam\resources\views" />
+      <recent name="C:\Users\clovi\Documents\GitHub\MarieTeam\MarieTeam\resources\components" />
+      <recent name="C:\Users\clovi\Documents\GitHub\MarieTeam\MarieTeam\resources\js" />
+      <recent name="C:\Users\clovi\Documents\GitHub\MarieTeam\MarieTeam\resources\css" />
+      <recent name="C:\Users\clovi\Documents\GitHub\MarieTeam\MarieTeam\resources\img" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -53,6 +80,7 @@
       <updated>1670417952349</updated>
       <workItem from="1670417953743" duration="228000" />
       <workItem from="1670418446023" duration="5483000" />
+      <workItem from="1670424496678" duration="2964000" />
     </task>
     <servers />
   </component>
