@@ -10,7 +10,7 @@
 <img class="wave" src="{{ Vite::asset('resources/img/wave.png') }}">
 <div class="container">
     <div class="img">
-        <img src="MarieTeam/resources/img/boat.svg">
+        <img src="{{ Vite::asset('resources/img/boat.svg') }}">
     </div>
     <div class="login-container">
         <form action="login.php">
@@ -37,6 +37,5 @@
         </form>
     </div>
 </div>
-<script type="text/javascript" src="src/js/login.js"></script>
-</body>
+@vite('resources/js/login.js')</body>
 </html>

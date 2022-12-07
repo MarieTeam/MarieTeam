@@ -8,8 +8,10 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/css/login.css',
+                'resources/css/inscription.css',
                 'resources/js/app.js',
-                'resources/img/wave.png',
+                'resources/js/login.js',
+                'resources/js/inscription.js',
             ],
             refresh: true,
         }),
