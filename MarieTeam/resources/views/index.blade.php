@@ -14,6 +14,7 @@
 </head>
 
 <body>
+@include('components/nav');
 <div class="d-flex flex-row justify-content-around align-items-center m-5">
     <div class="d-flex align-items-center border border-1">
         <svg width="30" height="48" viewBox="0 0 30 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="mx-2">
