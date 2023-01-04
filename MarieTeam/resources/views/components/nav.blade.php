@@ -19,7 +19,7 @@
                         <a href="#" class="nav-link px-2 link-dark">ATROUVER</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link px-2 link-dark">ATROUVER</a>
+                        <a href="/horaires" class="nav-link px-2 link-dark">Horaires</a>
                     </li>
                     <li>
                         <a href="#" class="nav-link px-2 link-dark">ATROUVER</a>

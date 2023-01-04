@@ -17,7 +17,9 @@ Route::get('/', function () {
     return view('index');
 });
 
-
+Route::get('/horaires', function () {
+    return view('horaire');
+});
 
 Auth::routes();
 
