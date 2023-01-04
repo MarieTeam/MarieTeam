@@ -16,7 +16,7 @@
                         <a href="#" class="nav-link px-2 link-secondary">Acceuil</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link px-2 link-dark">ATROUVER</a>
+                        <a href="tarifs" class="nav-link px-2 link-dark">Tarifs</a>
                     </li>
                     <li>
                         <a href="/horaires" class="nav-link px-2 link-dark">Horaires</a>

@@ -17,8 +17,15 @@ Route::get('/', function () {
     return view('index');
 });
 
+
 Route::get('/horaires', function () {
     return view('horaire');
+});
+
+
+
+    Route::get('/tarifs', function () {
+    return view('tarifs');
 });
 
 Auth::routes();
