@@ -1,4 +1,11 @@
 @include('components/nav')
+<style>
+    html, body { height: 100%; }
+    body {
+        background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
+        overflow: hidden;
+    }
+</style>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -67,4 +74,8 @@
             </div>
         </div>
     </div>
+</div>
+<div class="ocean">
+    <div class="wave"></div>
+    <div class="wave"></div>
 </div>

@@ -19,8 +19,9 @@
             </svg>
             <select name="selectDepart"  class="form-select border-0" aria-label="Default select example">
                 <option selected>choisissez un départ</option>
-                <option value="1">Calais</option>
-                <option value="2">Nice</option>
+                @foreach($ports as $port)
+                    <option name="{{$port->nom}}">{{ $port->nom }}</option>
+                @endforeach
             </select>
         </div>
         <div class="d-flex align-items-center border border-1 me-3">
@@ -31,8 +32,9 @@
             </svg>
             <select name="selectArrivee" class="form-select border-0" aria-label="Default select example">
                 <option selected>choisissez une arrivée</option>
-                <option value="1">Douvres</option>
-                <option value="2">Bastia</option>
+                @foreach($ports as $port)
+                    <option name="{{$port->nom}}">{{ $port->nom }}</option>
+                @endforeach
             </select>
         </div>
         <div class="d-flex align-items-center border border-1 me-3">
@@ -43,9 +45,9 @@
             </svg>
             <select name="mode_transport" class="form-select border-0" aria-label="Default select example">
                 <option selected>choisissez un mode de transport</option>
-                <option value="1">Voiture</option>
-                <option value="2">Camping-Car</option>
-                <option value="3">A pied</option>
+                <option value="Voiture">Voiture</option>
+                <option value="Camping-Car">Camping-Car</option>
+                <option value="A pied">A pied</option>
             </select>
         </div>
         <div class="d-flex align-items-center border border-1 me-3">
@@ -54,11 +56,12 @@
                       d="M14.2847 36.9506L13.8853 36.9497H13.5347C13.3275 36.9497 13.1203 36.8456 13.1203 36.6375L11.8734 27.7031H11.7694L10.8337 27.2878C10.6704 27.2222 10.5321 27.1064 10.4387 26.9571C10.3454 26.8078 10.3019 26.6328 10.3144 26.4572L10.5225 19.9134C10.5749 19.206 10.8934 18.5447 11.4138 18.0626C11.9343 17.5806 12.6181 17.3137 13.3275 17.3156H16.0275C16.7367 17.3137 17.4204 17.5805 17.9408 18.0623C18.4613 18.5441 18.7799 19.2052 18.8325 19.9125L19.2487 26.4572C19.2475 26.6303 19.1982 26.7996 19.1063 26.9463C19.0144 27.0929 18.8836 27.2112 18.7284 27.2878L17.7947 27.7031H17.6906L16.4437 36.6375C16.3397 36.8456 16.2365 36.9497 16.0284 36.9497H15.3169C15.254 36.9497 15.1837 36.9375 15.1528 36.9131C15.1109 36.8766 15.0768 36.8319 15.0525 36.7819L14.79 36.3187L14.5275 36.7809C14.5027 36.8312 14.4683 36.8761 14.4262 36.9131C14.3847 36.9407 14.3353 36.9539 14.2856 36.9506H14.2847ZM14.5734 10.875C14.928 10.875 15.2791 10.9448 15.6067 11.0805C15.9342 11.2162 16.2319 11.4151 16.4826 11.6658C16.7333 11.9165 16.9322 12.2142 17.0679 12.5418C17.2036 12.8693 17.2734 13.2204 17.2734 13.575C17.2734 13.9296 17.2036 14.2807 17.0679 14.6082C16.9322 14.9358 16.7333 15.2335 16.4826 15.4842C16.2319 15.7349 15.9342 15.9338 15.6067 16.0695C15.2791 16.2052 14.928 16.275 14.5734 16.275C13.8573 16.275 13.1706 15.9905 12.6642 15.4842C12.1579 14.9778 11.8734 14.2911 11.8734 13.575C11.8734 12.8589 12.1579 12.1722 12.6642 11.6658C13.1706 11.1595 13.8573 10.875 14.5734 10.875Z"
                       fill="#6BB2E2" />
             </svg>
-            <select class="form-select border-0" aria-label="Default select example">
+            <select name="nbPersonnes" class="form-select border-0" aria-label="Default select example">
                 <option selected>Combien etes-vous ?</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
-                <option value="3">4</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
             </select>
         </div>
         <div>
