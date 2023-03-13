@@ -27,4 +27,15 @@ class HomeController extends Controller
         $ports = DB::select('SELECT * FROM `port`');
         return view('home')->with('ports', $ports);
     }
+
+    public function getWeather($city)
+    {
+        $apiKey = env('OPEN_WEATHER_MAP_API_KEY');
+        $client = new Client();
+        $url = "http://api.openweathermap.org/data/2.5/weather?q={$city}&appid={$apiKey}";
+        $response = $client->get($url);
+        $data = json_decode($response->getBody(), true);
+        return view('weather', compact('data'));
+    }
+
 }
