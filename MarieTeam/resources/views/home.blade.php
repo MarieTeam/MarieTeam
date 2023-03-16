@@ -97,7 +97,7 @@
                 <p class="text-center" style="width: 80%; margin-left: 73px;">Les traversées vers les îles du
                     Morbihan
                     en bateau toute l’année depuis les embarcadères de Quiberon et Lorient.</p>
-                <div class="d-flex flex-row justify-content-evenly">
+                <div class="d-flex flex-row justify-content-evenly flex-wrap">
                     @foreach($ports as $port)
                         <div>
                             <svg width="97" height="96" viewBox="0 0 97 96" fill="none"
@@ -132,64 +132,45 @@
 </div>
 <div id="carouselExampleIndicators" class="carousel carousel-dark slide " data-bs-ride="true">
     <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
+        @php
+            $count = 0;
+        @endphp
+        @foreach($weatherData as $cityName => $data)
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $count}}" class="active"
+                aria-current="true" aria-label="Slide {{ $count}}"></button>
+            @php
+                $count++;
+            @endphp
+        @endforeach
     </div>
     <div class="carousel-inner">
-        <div class="carousel-item active"
-             style="height: 45vh;background-size: cover;background-image: url(https://www.corsicalinea.com/var/site/storage/images/_aliases/slideshow_destination/9/1/4/1/1419-52-fre-FR/Marseille2.jpg);">
-            <div class="d-flex justify-content-center">
-                <div class="bg-light opacity-50 w-50 mt-5">
-                    <h1 class="text-center">Marseille</h1>
-                    <p class="text-center">Véritable porte ouverte sur la Méditerranée, la cité phocéenne revêt des visages bien
-                        différents
-                        ! Ville on ne peut plus cosmopolite, elle se meut au gré des envies du voyageur : sportive,
-                        artistique ou culturelle… Marseille regorge de richesses...</p>
-                    <div class="carousel-caption text-dark d-flex flex-row justify-content-evenly"
-                         style="position: inherit !important;">
-                        <div>
-                            <svg class="w-25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-                                <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                                <path
-                                    d="M0 336c0 79.5 64.5 144 144 144H512c70.7 0 128-57.3 128-128c0-61.9-44-113.6-102.4-125.4c4.1-10.7 6.4-22.4 6.4-34.6c0-53-43-96-96-96c-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32C167.6 32 96 103.6 96 192c0 2.7 .1 5.4 .2 8.1C40.2 219.8 0 273.2 0 336z" />
-                            </svg>
-                            <h5>Mercredi</h5>
-                            <p>19°</p>
-                        </div>
-                        <div>
-                            <svg class="w-25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-                                <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                                <path
-                                    d="M0 336c0 79.5 64.5 144 144 144H512c70.7 0 128-57.3 128-128c0-61.9-44-113.6-102.4-125.4c4.1-10.7 6.4-22.4 6.4-34.6c0-53-43-96-96-96c-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32C167.6 32 96 103.6 96 192c0 2.7 .1 5.4 .2 8.1C40.2 219.8 0 273.2 0 336z" />
-                            </svg>
-                            <h5>Mercredi</h5>
-                            <p>19°</p>
-                        </div>
-                        <div>
-                            <svg class="w-25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-                                <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                                <path
-                                    d="M0 336c0 79.5 64.5 144 144 144H512c70.7 0 128-57.3 128-128c0-61.9-44-113.6-102.4-125.4c4.1-10.7 6.4-22.4 6.4-34.6c0-53-43-96-96-96c-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32C167.6 32 96 103.6 96 192c0 2.7 .1 5.4 .2 8.1C40.2 219.8 0 273.2 0 336z" />
-                            </svg>
-                            <h5>Mercredi</h5>
-                            <p>19°</p>
+        @foreach($weatherData as $cityName => $data)
+            <div class="carousel-item {{ $loop->first ? 'active' : '' }}"
+                 style="height: 45vh;background-size: cover;background-image: url(https://www.corsicalinea.com/var/site/storage/images/_aliases/slideshow_destination/9/1/4/1/1419-52-fre-FR/Marseille2.jpg);">
+                <div class="d-flex justify-content-center">
+                    <div class="bg-light opacity-50 w-50 mt-5">
+                        <h1 class="text-center">{{ $cityName }}</h1>
+                        <p class="text-center">Véritable porte ouverte sur la Méditerranée, la cité phocéenne revêt des visages bien
+                            différents
+                            ! Ville on ne peut plus cosmopolite, elle se meut au gré des envies du voyageur : sportive,
+                            artistique ou culturelle… Marseille regorge de richesses...</p>
+                        <div class="carousel-caption text-dark d-flex flex-row justify-content-evenly"
+                             style="position: inherit !important;">
+                            <div>
+                                <svg class="w-25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                    <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                    <path
+                                        d="M0 336c0 79.5 64.5 144 144 144H512c70.7 0 128-57.3 128-128c0-61.9-44-113.6-102.4-125.4c4.1-10.7 6.4-22.4 6.4-34.6c0-53-43-96-96-96c-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32C167.6 32 96 103.6 96 192c0 2.7 .1 5.4 .2 8.1C40.2 219.8 0 273.2 0 336z" />
+                                </svg>
+                                <h5>Mercredi</h5>
+                                <p>{{ $data['temperatureCelsius'] }}°C°</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="carousel-item">
-            <img src="https://www.corsicalinea.com/var/site/storage/images/_aliases/slideshow_destination/9/1/4/1/1419-52-fre-FR/Marseille2.jpg"
-                 class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="https://www.corsicalinea.com/var/site/storage/images/_aliases/slideshow_destination/9/1/4/1/1419-52-fre-FR/Marseille2.jpg"
-                 class="d-block w-100" alt="...">
-        </div>
+        @endforeach
+
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
             data-bs-slide="prev">
