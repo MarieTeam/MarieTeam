@@ -37,7 +37,8 @@ class HomeController extends Controller
 
     public function getAllWeather()
     {
-        $cities = DB::select('SELECT * FROM `Port`');
+        $cities = DB::select('SELECT * FROM `port`');
+        $Types = DB::select('SELECT * FROM `type`');
         $weatherData = [];
         foreach ($cities as $city) {
             $data = $this->getWeatherData($city->nom);
@@ -49,6 +50,6 @@ class HomeController extends Controller
                 'temperatureFahrenheit' => $temperatureFahrenheit
             ];
         }
-        return view('home', compact('weatherData'))->with('ports', $cities);
+        return view('home', compact('weatherData'))->with('ports', $cities)->with('Types', $Types);
     }
 }

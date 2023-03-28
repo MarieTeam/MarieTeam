@@ -50,9 +50,9 @@
             </svg>
             <select name="mode_transport" class="form-select border-0" aria-label="Default select example">
                 <option selected>choisissez un mode de transport</option>
-                <option value="Voiture">Voiture</option>
-                <option value="Camping-Car">Camping-Car</option>
-                <option value="A pied">A pied</option>
+                @foreach($Types as $Type)
+                    <option name="{{$Type->libelle}}">{{ $Type->libelle }}</option>
+                @endforeach
             </select>
         </div>
         <div class="d-flex align-items-center border border-1 me-3">
