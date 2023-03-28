@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TarifController;
 use App\Http\Controllers\ToutLesBateaux;
 use Illuminate\Support\Facades\Route;
 
@@ -22,9 +23,7 @@ Route::get('/horaires', function () {
 
 
 
-    Route::get('/tarifs', function () {
-    return view('tarifs');
-});
+Route::get('/tarifs', [TarifController::class, 'viewTarif']);
 
 Route::get('/toutLesBateaux', [ToutLesBateaux::class , 'Bateauxrecherche'])->name('Bateauxrecherche');
 

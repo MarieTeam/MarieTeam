@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
 </head>
 <body>
-@include('components/nav');
+@include('components/nav')
     <div class="d-flex align-items-start">
         <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
             <button class="nav-link active" id="v-pills-tarifs-passagers-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tarifs-passagers" type="button" role="tab" aria-controls="v-pills-tarifs-passagers" aria-selected="true">tarifs passagers</button>
@@ -16,19 +16,12 @@
         <div class="tab-content" id="v-pills-tabContent">
             <div class="tab-pane fade show active" id="v-pills-tarifs-passagers" role="tabpanel" aria-labelledby="v-pills-tarifs-passagers-tab" tabindex="0">
                 Prix indiqués aller simple:
-                <br>Période du 01/09/2021 au 15/06/2022 et du 16/06/2022 au 15/09/2022 et du 16/09/2022 au 31/05/2023.
-                <br>
-                Billet adulte aller-simple :
-                18,00€  – 20,00 €  – 19,00 €
+                @foreach($TarifsEte as $tarif)
+                        {{ $tarif->tarif }}
+                        {{ $tarif->libelle }}
+                @endforeach
 
-                Billet jeune de 8 à 18 ans inclus aller-simple :
-                11,10 €  – 13,10 €
-
-                Billet enfant de 4 à 18 ans :
-                11,00 €  – 11,00 €
-
-                Billet enfant -4 ans :                                                                                                                                                  gratuit  – gratuit</div>
-            <div class="tab-pane fade" id="v-pills-tarifs-véhicules" role="tabpanel" aria-labelledby="v-pills-tarifs-véhicules-tab" tabindex="0">
+                <div class="tab-pane fade" id="v-pills-tarifs-véhicules" role="tabpanel" aria-labelledby="v-pills-tarifs-véhicules-tab" tabindex="0">
                 Prix indiqués aller simple:
                 <br>Période du 01/09/2021 au 15/06/2022 et du 16/06/2022 au 15/09/2022 et du 16/09/2022 au 31/05/2023.
                 Haute fréquentation les vendredis, samedis, dimanches et jours fériés du 01/04 au 30/06 et du 01/09 au 30/09 et tous les jours du 01/07 au 31/08
