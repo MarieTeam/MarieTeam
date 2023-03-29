@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Port;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -37,6 +38,14 @@ class HomeController extends Controller
 
     public function getAllWeather()
     {
+        $ports = Port::all();
+        $selectedPorts = [];
+
+        if(request('port1')) {
+            $selectedPorts[] = request('port1');
+        }
+        $ports2 = Port::whereNotIn('id', $selectedPorts)->get();
+
         $cities = DB::select('SELECT * FROM `port`');
         $Types = DB::select('SELECT * FROM `type`');
         $weatherData = [];
@@ -50,6 +59,6 @@ class HomeController extends Controller
                 'temperatureFahrenheit' => $temperatureFahrenheit
             ];
         }
-        return view('home', compact('weatherData'))->with('ports', $cities)->with('Types', $Types);
+        return view('home', compact('weatherData', 'ports', 'ports2', 'selectedPorts'))->with('Types', $Types);
     }
 }
