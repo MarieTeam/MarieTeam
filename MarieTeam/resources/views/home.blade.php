@@ -5,7 +5,6 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <title>MARIE TEAM</title>
     <meta charset="UTF-8">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 @include('components/nav')
@@ -23,7 +22,7 @@
                       d="M28.1251 26.3438L25.8938 30.6094H25.5563C22.1063 30.6094 20.9251 32.0813 17.4376 32.0813C13.9501 32.0813 11.0063 29.925 7.77195 29.925C4.5282 29.925 3.01883 30.6656 3.01883 30.6656C2.26332 29.3612 1.86857 27.8793 1.87508 26.3719L28.1251 26.3438ZM15.2532 16.5L16.5376 21.6H23.4095L24.0845 22.7719H21.122C21.122 22.7719 20.8782 22.7719 20.8782 22.9687C20.8782 23.1562 20.897 23.325 20.9251 23.5312C20.9532 23.7281 21.047 23.9438 21.422 24.0375L25.2938 24.8813L25.6688 25.5188H5.98133L7.7907 21.6H10.2282L12.9845 16.5H15.2532ZM18.5626 23.0625H18.0001C17.7001 23.0625 17.4657 23.25 17.4657 23.4844V24.2812C17.4657 24.45 17.597 24.6 17.7845 24.6656C17.8537 24.6901 17.9266 24.7028 18.0001 24.7031H18.5626C18.647 24.7031 18.7126 24.6937 18.7782 24.6656C18.9657 24.6 19.097 24.45 19.097 24.2906V23.4844C19.097 23.25 18.8626 23.0625 18.5626 23.0625ZM15.2813 23.0625H14.7188C14.4188 23.0625 14.1845 23.25 14.1845 23.4844V24.2812C14.1845 24.45 14.3157 24.6 14.5032 24.6656C14.5725 24.6901 14.6454 24.7028 14.7188 24.7031H15.2813C15.3657 24.7031 15.4313 24.6937 15.497 24.6656C15.6845 24.6 15.8157 24.45 15.8157 24.2906V23.4844C15.8157 23.25 15.5813 23.0625 15.2813 23.0625ZM12.0095 23.0625H11.4282C11.1376 23.0625 10.9032 23.25 10.9032 23.4844V24.2812C10.9032 24.45 11.0251 24.6 11.2126 24.6656C11.2782 24.6937 11.3438 24.7031 11.4282 24.7031H12.0095C12.0938 24.7031 12.1595 24.6937 12.2251 24.6656C12.4126 24.6 12.5438 24.45 12.5438 24.2906V23.4844C12.5438 23.325 12.4313 23.2031 12.2626 23.1281C12.1839 23.0882 12.0976 23.0658 12.0095 23.0625Z"
                       fill="#6BB2E2" />
             </svg>
-            <select name="port1" id="port1"  class="form-select border-0" aria-label="Default select example">
+            <select name="selectDepart"  id="selectDepart"  class="port form-select border-0 bg-transparent" aria-label="Default select example">
                 <option selected>choisissez un départ</option>
                 @foreach($ports as $port)
                     <option name="{{$port->nom}}">{{ $port->nom }}</option>
@@ -36,10 +35,10 @@
                       d="M28.1251 26.3438L25.8938 30.6094H25.5563C22.1063 30.6094 20.9251 32.0813 17.4376 32.0813C13.9501 32.0813 11.0063 29.925 7.77195 29.925C4.5282 29.925 3.01883 30.6656 3.01883 30.6656C2.26332 29.3612 1.86857 27.8793 1.87508 26.3719L28.1251 26.3438ZM15.2532 16.5L16.5376 21.6H23.4095L24.0845 22.7719H21.122C21.122 22.7719 20.8782 22.7719 20.8782 22.9687C20.8782 23.1562 20.897 23.325 20.9251 23.5312C20.9532 23.7281 21.047 23.9438 21.422 24.0375L25.2938 24.8813L25.6688 25.5188H5.98133L7.7907 21.6H10.2282L12.9845 16.5H15.2532ZM18.5626 23.0625H18.0001C17.7001 23.0625 17.4657 23.25 17.4657 23.4844V24.2812C17.4657 24.45 17.597 24.6 17.7845 24.6656C17.8537 24.6901 17.9266 24.7028 18.0001 24.7031H18.5626C18.647 24.7031 18.7126 24.6937 18.7782 24.6656C18.9657 24.6 19.097 24.45 19.097 24.2906V23.4844C19.097 23.25 18.8626 23.0625 18.5626 23.0625ZM15.2813 23.0625H14.7188C14.4188 23.0625 14.1845 23.25 14.1845 23.4844V24.2812C14.1845 24.45 14.3157 24.6 14.5032 24.6656C14.5725 24.6901 14.6454 24.7028 14.7188 24.7031H15.2813C15.3657 24.7031 15.4313 24.6937 15.497 24.6656C15.6845 24.6 15.8157 24.45 15.8157 24.2906V23.4844C15.8157 23.25 15.5813 23.0625 15.2813 23.0625ZM12.0095 23.0625H11.4282C11.1376 23.0625 10.9032 23.25 10.9032 23.4844V24.2812C10.9032 24.45 11.0251 24.6 11.2126 24.6656C11.2782 24.6937 11.3438 24.7031 11.4282 24.7031H12.0095C12.0938 24.7031 12.1595 24.6937 12.2251 24.6656C12.4126 24.6 12.5438 24.45 12.5438 24.2906V23.4844C12.5438 23.325 12.4313 23.2031 12.2626 23.1281C12.1839 23.0882 12.0976 23.0658 12.0095 23.0625Z"
                       fill="#6BB2E2" />
             </svg>
-            <select name="port2" id="port2" class="form-select border-0" aria-label="Default select example">
+            <select name="selectArrivee" name='selectArrivee' class="port form-select border-0 bg-transparent" aria-label="Default select example">
                 <option selected>choisissez une arrivée</option>
                 @foreach($ports as $port)
-                    <option name="{{$port->nom}}">{{ $port->nom }}</option>
+                    <option value="{{$port->id}}" {{ old('selectArrivee') == $port->id ? 'selected' : '' }} {{ old('selectDepart') == $port->id ? 'disabled' : '' }}>{{$port->nom}}</option>
                 @endforeach
             </select>
         </div>
@@ -54,18 +53,6 @@
     style="height: 65vh;background-size: cover; background-image: url('https://www.compagnie-oceane.fr/wp-content/uploads/2022/07/COUV-HOME-D-1920x866.jpg');">
     <div class="d-flex justify-content-center">
         <div class="bg-primary d-flex rounded-3 shadow w-50" style="margin-top: 10vh;">
-            <div class="flex-grow-0 w-50 mx-3 mt-3">
-                <p>A la une</p>
-                <p class="">PORT DU MASQUE RECOMMANDE</p>
-                <p class="text-wrap">
-                    Face à la recrudescence de
-                    l’épidémie, nous recommandons
-                    à tous nos voyageurs de porter un
-                    masque en gare et à bord de nos
-                    navires. Nous invitons à...</p>
-                <button type="button" class="btn btn-dark">Lire la suite</button>
-
-            </div>
             <div class="bg-white rounded-3 flex-grow-1 ">
                 <h1 class="text-center mt-3">Les lignes maritimes du réseau :</h1>
                 <p class="text-center" style="width: 80%; margin-left: 73px;">Les traversées vers les îles du
@@ -157,14 +144,5 @@
         <span class="visually-hidden">Next</span>
     </button>
 </div>
-
 </body>
-<script>
-    $('#port1').on('change', function() {
-        var selectedOptionId = $(this).find(':selected').attr('id');
-        $('#port2').find('#' + selectedOptionId).remove();
-    });
-</script>
-<script>console.log(jQuery);</script>
-
 </html>
