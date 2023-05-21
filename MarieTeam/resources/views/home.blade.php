@@ -13,7 +13,8 @@
         background: white;
     }
 </style>
-<form method="GET" action="{{ route('Bateauxrecherche') }}">
+
+<form method="GET" action="{{ route('Bateauxrecherche', ['selectDepart' => old('selectDepart'), 'selectArrivee' => old('selectArrivee')]) }}">
     @csrf
     <div class="d-flex flex-row justify-content-center align-items-center m-5">
         <div class="d-flex align-items-center border border-1 me-3">
@@ -47,8 +48,6 @@
         </div>
     </div>
 </form>
-
-
 <div
     style="height: 65vh;background-size: cover; background-image: url('https://www.compagnie-oceane.fr/wp-content/uploads/2022/07/COUV-HOME-D-1920x866.jpg');">
     <div class="d-flex justify-content-center">
@@ -144,5 +143,6 @@
         <span class="visually-hidden">Next</span>
     </button>
 </div>
+
 </body>
 </html>

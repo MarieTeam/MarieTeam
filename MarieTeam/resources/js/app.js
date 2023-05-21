@@ -6,6 +6,8 @@
 
 import './bootstrap';
 import { createApp } from 'vue';
+import flatpickr from 'flatpickr';
+import 'flatpickr/dist/flatpickr.min.css';
 
 /**
  * Next, we will create a fresh Vue application instance. You may then begin
@@ -37,3 +39,29 @@ app.component('example-component', ExampleComponent);
  */
 
 app.mount('#app');
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const dateDepart = document.getElementById('date_depart');
+    const dateArrivee = document.getElementById('date_arrivee');
+
+    if (dateDepart) {
+        flatpickr(dateDepart, {
+            dateFormat: 'Y-m-d',
+            minDate: 'today',
+            onChange: function(selectedDates, dateStr) {
+                if (dateArrivee) {
+                    dateArrivee.config.minDate = dateStr;
+                }
+            },
+        });
+    }
+
+    if (dateArrivee) {
+        flatpickr(dateArrivee, {
+            dateFormat: 'Y-m-d',
+            minDate: 'today',
+        });
+    }
+});
+

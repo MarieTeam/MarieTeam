@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Horaire;
 use App\Http\Controllers\TarifController;
 use App\Http\Controllers\ToutLesBateaux;
 use Illuminate\Support\Facades\Route;
@@ -14,14 +15,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', [App\Http\Controllers\HomeController::class, 'getAllWeather'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'getAllWeather'])->name('indexMarieTeam');
 
 
-Route::get('/horaires', function () {
-    return view('horaire');
-});
-
-
+Route::get('/horaires', [Horaire::class, 'getallHoraire']);
 
 Route::get('/tarifs', [TarifController::class, 'viewTarif']);
 

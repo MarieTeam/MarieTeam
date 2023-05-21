@@ -24,7 +24,7 @@
                         <a href="/horaires" class="nav-link px-2 link-dark">Horaires</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link px-2 link-dark">ATROUVER</a>
+                        <a href="/toutLesBateaux" class="nav-link px-2 link-dark">Reserver</a>
                     </li>
                 </ul>
                 <div class="col-md-3 text-end">

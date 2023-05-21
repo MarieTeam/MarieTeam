@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Port extends Model
+class Bateau extends Model
 {
-    protected $table = 'Port'; // nom de la table dans la base de données
+    protected $table = 'Bateau'; // nom de la table dans la base de données
 
     protected $fillable = ['id', 'nom']; // colonnes pouvant être mass-assignées
 

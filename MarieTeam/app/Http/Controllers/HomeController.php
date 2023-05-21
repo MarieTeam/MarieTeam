@@ -46,10 +46,9 @@ class HomeController extends Controller
         }
         $ports2 = Port::whereNotIn('id', $selectedPorts)->get();
 
-        $cities = DB::select('SELECT * FROM `port`');
-        $Types = DB::select('SELECT * FROM `type`');
+        $Types = DB::select('SELECT * FROM `Type`');
         $weatherData = [];
-        foreach ($cities as $city) {
+        foreach ($ports as $city) {
             $data = $this->getWeatherData($city->nom);
             $temperatureCelsius = round($data['main']['temp'] - 273.15); // convert to Celsius
             $temperatureFahrenheit = round(($temperatureCelsius * 1.8) + 32); // convert to Fahrenheit
